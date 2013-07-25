@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block head %}{% endblock %}
+
+{% block html %}	  <br />  <br />  <br />
+<div class="thumbnail center well well-small text-center">
+ <h1>Welcome</h1>
+    <br />
+    <p>Lorem ipsuim</p>
+
+    <a  class="btn btn-primary" data-toggle="modal" href="#myModal">Register</a>
+</div>
+  <br />
+  </div>
+
+
+<div class="modal hide" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">x</button>
+    <h3>Register</h3>
+  </div>
+  <div class="modal-body">
+    <form method="post" action='/signup' name="login_form">
+      <p><input type="text" class="span3" name="eid" id="email" placeholder="Email"></p>
+      <p><input type="password" class="span3" name="passwd" placeholder="Password"></p>
+      <p><button type="submit" class="btn btn-primary">Register</button>
+      </p>
+    </form>
+  </div>
+
+	{% endblock %}

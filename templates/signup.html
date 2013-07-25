@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Create a user in THE SERVER{% endblock %}
+{% block head %}{% endblock %}
+
+{% block html %}	
+			<form  class="form-horizontal" action="/signup" method="post">
+			                  <fieldset>
+                  			<div id="legend">
+                        		<legend class="">Create a user in the SERVER MOVIES</legend>
+                      		</div> 
+			<label>Email </label><input type="text" name="email" placeholder="Your email" /><br>
+			<label>Name</label> <input type="text" name="name" placeholder="Your name" /><br>
+			<label>Last name </label><input type="text" name="lastname" placeholder="Your lasname" /><br>
+			<label>Password</label> <input type="password" name="password" placeholder="Your password" /><br>
+			            <input type="hidden" name="redirect" value="{{redirection}}">
+            <input type="hidden" name="token" value="{{token}}">
+            </fieldset><br><br>
+			<button  class="btn btn-primary">Create usser</button>
+			</form>
+			{% endblock %}
